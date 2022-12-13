@@ -1,0 +1,13 @@
+current directory: /Users/mobile/Desktop/testTaskSukhdeep/test_task_sukh/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+/Users/mobile/.rbenv/versions/2.7.5/bin/ruby -I /Users/mobile/.rbenv/versions/2.7.5/lib/ruby/2.7.0 -r ./siteconf20221209-95865-kybhxl.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mobile/Desktop/testTaskSukhdeep/test_task_sukh/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/mobile/Desktop/testTaskSukhdeep/test_task_sukh/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/mobile/Desktop/testTaskSukhdeep/test_task_sukh/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" install

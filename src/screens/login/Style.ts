@@ -9,8 +9,9 @@ export default StyleSheet.create({
   viewContainer: {
     marginLeft: 50,
     marginRight: 50,
-    marginTop: 20,
+    marginBottom: 50,
     flex: 1,
+    justifyContent:"center"
   },
   centerContainer: {},
   logoContainer: {alignItems: 'center'},

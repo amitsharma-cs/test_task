@@ -85,7 +85,7 @@ export default StyleSheet.create({
   stopContainer: {
     backgroundColor: 'red',
     paddingVertical: 10,
-    width: '100%',
+    width: '90%',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,

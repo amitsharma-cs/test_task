@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import Images from '../../assets/images/Images';
 import CustomButton from '../../modules/controls/CustomButton';
@@ -7,6 +7,18 @@ import TitleHeader from '../../modules/headers/TitleHeader';
 import styles from './Style';
 
 export default function Details(props: any) {
+  const [counter, setCounter] = useState(1);
+  const [stopCounter, setstopCounter] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!stopCounter) {
+        setCounter(counter +1);
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [counter]);
+
   return (
     <View style={styles.container}>
       <OpaqueHeader>
@@ -25,11 +37,15 @@ export default function Details(props: any) {
           <Text style={styles.text1}>ACTIVE FROM</Text>
           <View style={styles.timerContainer}>
             <View style={styles.timerTextContainer}>
-              <Text style={styles.timerText}>9</Text>
+              <Text style={styles.timerText}>{counter}</Text>
               <Text style={styles.secondsText}>seconds</Text>
             </View>
             <View style={styles.stopMainConatiner}>
-              <TouchableOpacity style={styles.stopContainer}>
+              <TouchableOpacity
+                onPress={() => {
+                  setstopCounter(true);
+                }}
+                style={styles.stopContainer}>
                 <Text style={{color: 'white', fontFamily: 'Poppins'}}>
                   Stop
                 </Text>
